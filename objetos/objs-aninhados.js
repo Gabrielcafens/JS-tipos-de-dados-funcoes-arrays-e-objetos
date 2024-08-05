@@ -10,7 +10,7 @@ const estudante = {
 
 estudante.endereco = {
   rua: "Av. Paulista",
-  numero: "123",
+  numero: "123A",
   complemento: "apt 123"
 }
 console.log(estudante.endereco.rua);
