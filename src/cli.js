@@ -3,6 +3,7 @@ import trataErros from './erros/funcoesErro.js';
 import { contaPalavras } from './index.js';
 import { montaSaidaArquivo } from './helpers.js';
 import { Command } from 'commander';
+import path from 'path';
 
 const program = new Command();
 program
@@ -14,25 +15,34 @@ program
 
     if (!texto || !destino) {
       console.error('erro: favor inserir caminho de origem e destino')
-        program.help();
-        return;
+      program.help();
+      return;
     }
-    })
 
-const caminhoArquivo = process.argv;
-const link = caminhoArquivo[2];
-const endereco = caminhoArquivo[3];
+    const caminhoTexto = path.resolve(texto);
+    const caminhoDestino = path.resolve(destino);
 
-fs.readFile(link, 'utf-8', (erro, texto) => {
-  try {
-    if (erro) throw erro
-    const resultado = contaPalavras(texto);
-    criaESalvaArquivo(resultado, endereco)
-  } catch(erro) {
-    trataErros(erro);
-  }
-})
+    try {
+      processaArquivo(caminhoTexto, caminhoDestino);
+      console.log('texto processado com sucesso');
+    } catch (erro) {
+      console.log('ocorreu um erro no processamento', erro);
+    }
+  })
 
+program.parse();
+
+function processaArquivo(texto, destino) {
+  fs.readFile(texto, 'utf-8', (erro, texto) => {
+    try {
+      if (erro) throw erro
+      const resultado = contaPalavras(texto);
+      criaESalvaArquivo(resultado, destino)
+    } catch(erro) {
+      trataErros(erro);
+    }
+  })
+}
 async function criaESalvaArquivo(listaPalavras, endereco) {
   const arquivoNovo = `${endereco}/resultado.txt`;
   const textoPalavras = montaSaidaArquivo(listaPalavras);
