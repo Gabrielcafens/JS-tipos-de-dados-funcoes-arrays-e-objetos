@@ -1,4 +1,4 @@
-const alunos = ['João', 'Juliana', 'Caio', 'Ana'];
+const alunos = ['João', 'Gabriel', 'Caio', 'Ana'];
 const medias = [10, 8, 7.5, 9];
 
 //Lista Multidimensional
@@ -14,5 +14,5 @@ function exibeNomeENota(aluno) {
       }
   }
   
-exibeNomeENota('Juliana');
+exibeNomeENota('Gabriel');
 exibeNomeENota('Vini');

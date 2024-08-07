@@ -8,5 +8,5 @@ function User (nome, email) {
   }
 }
 //new serve para criar instancia de um objeto numa função construtora
-const novoUser = new User('Juliana', 'j@j.com')
+const novoUser = new User('Gabriel', 'j@j.com')
 console.log(novoUser.exibirInfos());

@@ -1,8 +1,8 @@
-const alunos = ['João', 'Juliana', 'Caio', 'Ana'];
+const alunos = ['João', 'Gabriel', 'Caio', 'Ana'];
 const medias = [10, 8, 7.5, 9];
 
 
-//array de arrays (lista de alunos e medias) vai ser uma lista de 2 elementos [['João', 'Juliana', 'Caio', 'Ana' ], [ 10, 8, 7.5, 9 ]]
+//array de arrays (lista de alunos e medias) vai ser uma lista de 2 elementos [['João', 'Gabriel', 'Caio', 'Ana' ], [ 10, 8, 7.5, 9 ]]
 const lista = [alunos, medias];
 
 console.log(

@@ -1,4 +1,4 @@
-const alunos = ['João', 'Juliana', 'Caio', 'Ana'];
+const alunos = ['João', 'Gabriel', 'Caio', 'Ana'];
 const medias = [10, 8, 7.5, 9];
 
 // Lista Multidimensional
@@ -24,5 +24,5 @@ function exibeNomeENota(aluno) {
 }
 
 // Chamadas de teste da função
-exibeNomeENota('Juliana'); // Deve exibir: "Juliana tem a média 8"
+exibeNomeENota('Gabriel'); // Deve exibir: "Gabriel tem a média 8"
 exibeNomeENota('Vini'); // Deve exibir: "Estudante não existe na lista"

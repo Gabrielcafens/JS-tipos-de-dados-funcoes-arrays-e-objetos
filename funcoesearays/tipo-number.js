@@ -7,5 +7,5 @@ const total = (notaPrimeiroBi + notaSegundoBi + notaTerceiroBi + notaQuartoBi) /
 
 console.log('a média é ' + total.toFixed(2));
 
-const nome = 'Juliana';
+const nome = 'Gabriel';
 console.log('meu nome é ' + nome);

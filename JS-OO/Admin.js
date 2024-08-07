@@ -1,7 +1,7 @@
 import { log } from 'console'
 import User from './User.js'
 //super é de superclasse, ou seja, ele chama o construtor da classe pai(User)
-class Admin extends User {
+export default class Admin extends User {
   constructor(nome, email, nascimento, role = "admin", ativo = "true") {
     super(nome, email, nascimento, role, ativo)
   }
