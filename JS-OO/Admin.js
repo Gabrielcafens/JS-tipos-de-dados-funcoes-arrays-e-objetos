@@ -1,16 +1,16 @@
 import { log } from 'console'
 import User from './User.js'
-
+//super é de superclasse, ou seja, ele chama o construtor da classe pai(User)
 class Admin extends User {
-  constructor(nome, email, nascimento, role, ativo = true) {
+  constructor(nome, email, nascimento, role = "admin", ativo = "true") {
     super(nome, email, nascimento, role, ativo)
   }
-//super é de superclasse, ou seja, ele chama o construtor da classe pai(User)
-  exibirInfos() {
-    return `${this.nome}, ${this.email}, ${this.role}`
+
+  criarCurso(nomeCurso, qtdVagas) {
+    return `curso ${nomeCurso} criado com ${qtdVagas} vagas.`
   }
 }
 
-const novoAdmin = new Admin('Constance', 'constance.com', '2024-01-01', 'admin')
-log(novoAdmin.exibirInfos());
-log(novoAdmin)
+const novoAdmin = new Admin("Rodrigo", "r@r.com", "2024-01-01")
+console.log(novoAdmin);
+console.log(novoAdmin.criarCurso('JavaScript', 20));
